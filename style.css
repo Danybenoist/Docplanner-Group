@@ -5,16 +5,20 @@ body {
  
 /*nav bar*/
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  width: 100%;
   background-color: white;
   padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  
   border-bottom: 1px solid #eee;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
 .logo img {
@@ -37,7 +41,7 @@ body {
     text-align: center;
     padding: 60px 20px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 .hero h1 {
     font-size: 2.5rem;
@@ -142,14 +146,39 @@ font: size 1rm; ;
   gap: 20px;
 }
 
-.global-logos img {
-  height: 40px;
-  opacity: 0.8;
+.global-logos a {
+  display: inline-block;
   
+
+}
+.global-logos a:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  background-color: #03a690;
+}
+.global-logos svg {
+  width: 100px;
+  height: auto;
+}
+
+.global-logos svg:hover {
+  transform: scale(1.1);
+  color: #00b39b;
+  opacity: 0.8;
+  background-color: #04917e;
+}
+
+.global-logos img {
+  width: 100px;
+  height: auto;
+
+
 }
 
 .global-logos img:hover {
-  opacity: 1;
+    transform: scale(1.1);
+  background-color: #048a79;
+  opacity: 0.8;
 }
 
 /* Section icônes  */
@@ -158,11 +187,18 @@ font: size 1rm; ;
   color: black;
   padding: 80px 20px;
   text-align: center;
-}
+  display: flex;
+  justify-content: space-around;
 
+
+}
+.icone-titre{
+    width: 45%;
+}
 .icone-titre h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #00b39b;
 }
 
 .icone-titre p {
@@ -174,10 +210,13 @@ font: size 1rm; ;
 /* Cartes */
 .icones-cards {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  background-color: white;
+  gap: 30px; */
+  
+
+  
+  
 }
 
 .icones-card {
@@ -187,13 +226,41 @@ font: size 1rm; ;
   width: 250px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 10px;
+    height: 300px;
+  
+}
+
+.groupe1{
+  
+  transform: translate(0, 40px);
 }
 
 /* Icônes */
+.icone-titre {
+  position: relative;
+}
+
+
+
+.icone-titre img {
+  position: absolute;
+  top: 300px;
+  right: 270px;
+  
+}
 .icones-card img {
   width: 40px;
   margin-bottom: 15px;
 }
+.icones img {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  
+}
+
 
 .icones-card h3 {
   font-size: 1.3rem;
@@ -209,9 +276,11 @@ font: size 1rm; ;
 .offices {
   background-color: #fff;
   padding: 80px 20px;
+  width: 100%;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .offices h2 {
